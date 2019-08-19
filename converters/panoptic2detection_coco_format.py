@@ -124,6 +124,8 @@ def convert_panoptic_to_detection_coco_format(input_json_file,
 
     t_delta = time.time() - start_time
     print("Time elapsed: {:0.2f} seconds".format(t_delta))
+    workers.close()
+    workers.join()
 
 
 if __name__ == "__main__":
